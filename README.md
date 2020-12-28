@@ -1,3 +1,6 @@
-# spotipyAlarm
-An alarm clock that plays content using spotify's API
-Created for personal use
+# SpotipyRasPiAlarm
+For personal use.
+A slapped together alarm meant to run on a Rasberry Pi.
+Uses pyautogui to automatically play music and news from spotify for web.
+I should have gone through the Spotify API but I'm lazy.
+I'll probably change it one day.
