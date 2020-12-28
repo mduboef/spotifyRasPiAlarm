@@ -1,32 +1,30 @@
 import pyautogui
 import time
 import datetime
-#from datetime import datetime
 
-alarmTime1 = datetime.time(9,29,00)
+# wake up time in 24 hr format
+alarmHour = 8
+alarmMin = 59
+
 debug = False
-
-alarmTime = alarmTime1.strftime("%H:%M")
-print(alarmTime)
 
 # infinite loop printing position for debug
 i = 1
 if debug == True:
-	while 1:
+	while True:
 		i += 1
 		print(pyautogui.position())
+		
+print("Alarm set for " + str(alarmHour) + ":" + str(alarmMin))
 
 # infinite loop for alarm running
-while 1:
+while True:
 
-	# update current time
-	now = datetime.now()
-	timeNow = now.strftime("%H:%M")
-	
-	print(timeNow)
-
-	# alarm time
-	if timeNow == alarmTime:
+	# check if it is alarm time
+	if  alarmHour == datetime.datetime.now().hour and alarmMin == datetime.datetime.now().minute:
+		
+		print("Good morning Mason, you absolute smokeshow.")
+		time.sleep(5)
 		
 		#OPEN BROWSER
 		pyautogui.moveTo(20,20,1)
