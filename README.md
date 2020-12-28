@@ -1,4 +1,4 @@
-# SpotipyRasPiAlarm
+# spotipyRasPiAlarm
 For personal use.
 A slapped together alarm meant to run on a Rasberry Pi.
 Uses pyautogui to automatically play music and news from spotify for web.
