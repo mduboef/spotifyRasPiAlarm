@@ -98,6 +98,9 @@ while True:
 		time.sleep(5000)
 		pyautogui.moveTo(1906,14)
 		pyautogui.click()
+		
+		pyautogui.moveTo(1919,600)
+
 	
 	# if not alarm time wait 59 seconds
 	else:
