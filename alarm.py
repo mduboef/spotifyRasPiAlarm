@@ -3,17 +3,14 @@ import time
 import datetime
 
 # wake up time in 24 hr format
-alarmHour = 8
+alarmHour = 7
 alarmMin = 59
 
-debug = False
+debugMode = False
 
 # infinite loop printing position for debug
-i = 1
-if debug == True:
-	while True:
-		i += 1
-		print(pyautogui.position())
+while debugMode == True:
+	print(pyautogui.position())
 		
 print("Alarm set for " + str(alarmHour) + ":" + str(alarmMin))
 
@@ -24,67 +21,85 @@ while True:
 	if  alarmHour == datetime.datetime.now().hour and alarmMin == datetime.datetime.now().minute:
 		
 		print("Good morning Mason, you absolute smokeshow.")
+		
+		#WAKE UP SCREEN
+		pyautogui.click()
+		pyautogui.moveTo(10,10,1)
+		pyautogui.moveTo(500,500,1)
+		pyautogui.moveTo(10,10,1)
+		pyautogui.moveTo(500,500,1)
+		pyautogui.moveTo(10,10,1)
+		pyautogui.moveTo(500,500,1)
 		time.sleep(5)
 		
 		#OPEN BROWSER
-		pyautogui.moveTo(20,20,1)
+		pyautogui.moveTo(12,1071,1)
 		pyautogui.click()
-		pyautogui.moveTo(80,168,1)
-		pyautogui.moveTo(284,166,1)
+		pyautogui.moveTo(123,780,1)
+		pyautogui.moveTo(288,785,1)
 		pyautogui.click()
-		time.sleep(10)
+		time.sleep(15)
 		
-		#OPEN DAILY DRIVE
-		pyautogui.moveTo(222,148,1)
+		#OPEN DAILY MIX
+		pyautogui.moveTo(294,113,1)
 		pyautogui.click()
 		time.sleep(25)
 		
 		#PLAY SONG 1
-		pyautogui.moveTo(288,811,1)
+		pyautogui.moveTo(288,624,1)
 		pyautogui.click()
 		time.sleep(5)
 		
+		#OPEN DAILY DRIVE
+		pyautogui.moveTo(270,46,1)
+		pyautogui.click()
+		time.sleep(5)
+		pyautogui.moveTo(228,112,1)
+		pyautogui.click()
+		time.sleep(25)
+		
 		#QUEUE NPR NEWS
-		pyautogui.moveTo(1860,755,1)
+		pyautogui.moveTo(1862,726,1)
 		pyautogui.click()
 		time.sleep(1)
-		pyautogui.moveTo(1730,780,1)
+		pyautogui.moveTo(1747,750,1)
 		pyautogui.click()
 		time.sleep(5)
 		
 		#QUEUE SONG 2
-		pyautogui.moveTo(1860,866,1)
+		pyautogui.moveTo(91,42,1)
+		pyautogui.click()
+		pyautogui.moveTo(1861,681,1)
 		pyautogui.click()
 		time.sleep(1)
-		pyautogui.moveTo(1689,524,1)
+		pyautogui.moveTo(1706,338,1)
 		pyautogui.click()
 		time.sleep(5)
 
-		#OPEN NEW TAB
-		pyautogui.moveTo(269,80,1)
+		#OPEN NYT DAILY
+		pyautogui.moveTo(507,44,1)
 		pyautogui.click()
 		time.sleep(10)
-		
-		#OPEN NYT DAILY
-		pyautogui.moveTo(155,148,1)
+		pyautogui.moveTo(148,111,1)
 		pyautogui.click()
 		time.sleep(25)
 		
 		#QUEUE NYT DAILY
-		pyautogui.moveTo(1214,759,1)
+		pyautogui.moveTo(1214,722,1)
 		pyautogui.click()
 		time.sleep(1)
-		pyautogui.moveTo(1300,788,1)
+		pyautogui.moveTo(1303,747,1)
 		pyautogui.click()
+		time.sleep(5)
 		
-		pyautogui.moveTo(0,0,1)
+		pyautogui.moveTo(10,10,1)
 
 		#CLOSE BROWSER
-		time.sleep(5400)
-		pyautogui.moveTo(1905,49)
+		time.sleep(5000)
+		pyautogui.moveTo(1906,14)
 		pyautogui.click()
 	
 	# if not alarm time wait 59 seconds
 	else:
-		time.sleep(59)
+		time.sleep(10)
 	
