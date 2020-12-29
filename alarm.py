@@ -101,5 +101,5 @@ while True:
 	
 	# if not alarm time wait 59 seconds
 	else:
-		time.sleep(10)
+		time.sleep(30)
 	
