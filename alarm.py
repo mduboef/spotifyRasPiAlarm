@@ -76,21 +76,24 @@ while True:
 		pyautogui.click()
 		time.sleep(5)
 
-		#OPEN NYT DAILY
-		pyautogui.moveTo(507,44,1)
-		pyautogui.click()
-		time.sleep(10)
-		pyautogui.moveTo(148,111,1)
-		pyautogui.click()
-		time.sleep(25)
-		
-		#QUEUE NYT DAILY
-		pyautogui.moveTo(1214,722,1)
-		pyautogui.click()
-		time.sleep(1)
-		pyautogui.moveTo(1303,747,1)
-		pyautogui.click()
-		time.sleep(5)
+		#CHECK IF WEEKDAY
+		if datetime.datetime.today().weekday() < 5:
+
+			#OPEN NYT DAILY
+			pyautogui.moveTo(507,44,1)
+			pyautogui.click()
+			time.sleep(10)
+			pyautogui.moveTo(148,111,1)
+			pyautogui.click()
+			time.sleep(25)
+			
+			#QUEUE NYT DAILY
+			pyautogui.moveTo(1214,722,1)
+			pyautogui.click()
+			time.sleep(1)
+			pyautogui.moveTo(1303,747,1)
+			pyautogui.click()
+			time.sleep(5)
 		
 		pyautogui.moveTo(10,10,1)
 
@@ -102,7 +105,7 @@ while True:
 		pyautogui.moveTo(1919,600)
 
 	
-	# if not alarm time wait 59 seconds
+	# if not alarm time wait 30 seconds
 	else:
 		time.sleep(30)
 	
